@@ -1,0 +1,23 @@
+@use '../../base/variables' as v;
+@use '../../base/minxis' as m;
+
+.nav {
+    display: none;
+    align-items: center;
+    gap: 1.5rem;
+
+    &__link {
+        font-family: v.$fontFamily;
+        color: v.$black;
+        font-weight: 700;    
+    }
+
+    @include m.tablet {
+        display: flex;
+        
+    }
+
+    @include m.desk {
+        gap: 3rem;
+    }
+}

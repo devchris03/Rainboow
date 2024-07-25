@@ -1,3 +1,29 @@
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../font/Comfortaa-Bold.woff2") format("woff2"), url("../font/Comfortaa-Bold.woff") format("woff"), url("../font/Comfortaa-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../font/Comfortaa-Bold.woff2") format("woff2"), url("../font/Comfortaa-Bold.woff") format("woff"), url("../font/Comfortaa-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../font/Comfortaa-Bold.woff2") format("woff2"), url("../font/Comfortaa-Bold.woff") format("woff"), url("../font/Comfortaa-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@supports (font-variation-settings: normal) {
+  @font-face {
+    font-family: "Comfortaa";
+    src: url("../font/Comfortaa-VariableFont_wght.woff2") format(woff2) tech(variations), url("../font/Comfortaa-VariableFont_wght.woff2") format("woff2-variations");
+    font-weight: 100 900;
+    font-stretch: 50% 200%;
+  }
+}
 html {
   font-size: 16px;
   -webkit-user-select: none;
@@ -8,32 +34,48 @@ html {
 body {
   margin: 0;
   font-size: 1rem;
-  font-family: "Comfortaa", sans-serif;
+  font-family: "Comfortaa";
+  background: red;
 }
 
-@font-face {
-  font-family: "Comfortaa", sans-serif;
-  src: url("../font/Comfortaa-Regular.woff2") format("woff2"), url("../font/Comfortaa-Regular.woff") format("woff"), url("../font/Comfortaa-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
+a {
+  text-decoration: none;
 }
-@font-face {
-  font-family: "Comfortaa", sans-serif;
-  src: url("../font/Comfortaa-Medium.woff2") format("woff2"), url("../font/Comfortaa-Medium.woff") format("woff"), url("../font/Comfortaa-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
+
+.wrapper {
+  max-inline-size: 75rem;
+  padding-inline: 1rem;
+  margin: 0 auto;
 }
-@font-face {
-  font-family: "Comfortaa", sans-serif;
-  src: url("../font/Comfortaa-Bold.woff2") format("woff2"), url("../font/Comfortaa-Bold.woff") format("woff"), url("../font/Comfortaa-Bold.ttf") format("truetype");
+
+.header {
+  background: #fafafa;
+  padding-block: 1.5rem;
+}
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav {
+  display: none;
+  align-items: center;
+  gap: 1.5rem;
+}
+.nav__link {
+  font-family: "Comfortaa";
+  color: #191919;
   font-weight: 700;
-  font-style: normal;
 }
-@supports (font-variation-settings: normal) {
-  @font-face {
-    font-family: "Comfortaa", sans-serif;
-    src: url("../font/Comfortaa-VariableFont_wght.woff2") format(woff2) tech(variations), url("../font/Comfortaa-VariableFont_wght.woff2") format("woff2-variations");
-    font-weight: 100 900;
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+  }
+}
+@media (min-width: 1024px) {
+  .nav {
+    gap: 3rem;
   }
 }
 /*# sourceMappingURL=app.css.map */

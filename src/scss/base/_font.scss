@@ -1,29 +1,7 @@
-@use './variables' as v;
-
-// fuente personalizada - estatica: comfortaa
+// fuentes personalizada - estatica 
 
 @font-face {
-    font-family: v.$fontFamily;
-    src:
-    url("../font/Comfortaa-Regular.woff2") format("woff2"),
-    url("../font/Comfortaa-Regular.woff") format("woff"),
-      url('../font/Comfortaa-Regular.ttf') format("truetype");
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: v.$fontFamily;
-    src:
-    url("../font/Comfortaa-Medium.woff2") format("woff2"),
-    url("../font/Comfortaa-Medium.woff") format("woff"),
-      url('../font/Comfortaa-Medium.ttf') format("truetype");
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: v.$fontFamily;
+    font-family: "Comfortaa";
     src:
     url("../font/Comfortaa-Bold.woff2") format("woff2"),
     url("../font/Comfortaa-Bold.woff") format("woff"),
@@ -32,14 +10,34 @@
     font-style: normal;
 }
 
-// fuente personalizada - variable: comfortaa
+@font-face {
+    font-family: "Comfortaa";
+    src:
+    url("../font/Comfortaa-Bold.woff2") format("woff2"),
+    url("../font/Comfortaa-Bold.woff") format("woff"),
+      url('../font/Comfortaa-Bold.ttf') format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: "Comfortaa";
+    src:
+    url("../font/Comfortaa-Bold.woff2") format("woff2"),
+    url("../font/Comfortaa-Bold.woff") format("woff"),
+      url('../font/Comfortaa-Bold.ttf') format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+// fuentes personalizada - variables 
 @supports (font-variation-settings: normal) {
     @font-face {
-      font-family: v.$fontFamily;
+      font-family: "Comfortaa";
       src:
         url("../font/Comfortaa-VariableFont_wght.woff2") format(woff2) tech(variations),  /* Sintaxis moderna */
         url("../font/Comfortaa-VariableFont_wght.woff2") format("woff2-variations");
       font-weight: 100 900;
+      font-stretch: 50% 200%;
     }
-}
+  }
