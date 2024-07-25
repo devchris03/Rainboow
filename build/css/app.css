@@ -1,4 +1,39 @@
-h1 {
-  color: red;
+html {
+  font-size: 16px;
+  -webkit-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body {
+  margin: 0;
+  font-size: 1rem;
+  font-family: "Comfortaa", sans-serif;
+}
+
+@font-face {
+  font-family: "Comfortaa", sans-serif;
+  src: url("../font/Comfortaa-Regular.woff2") format("woff2"), url("../font/Comfortaa-Regular.woff") format("woff"), url("../font/Comfortaa-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Comfortaa", sans-serif;
+  src: url("../font/Comfortaa-Medium.woff2") format("woff2"), url("../font/Comfortaa-Medium.woff") format("woff"), url("../font/Comfortaa-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Comfortaa", sans-serif;
+  src: url("../font/Comfortaa-Bold.woff2") format("woff2"), url("../font/Comfortaa-Bold.woff") format("woff"), url("../font/Comfortaa-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@supports (font-variation-settings: normal) {
+  @font-face {
+    font-family: "Comfortaa", sans-serif;
+    src: url("../font/Comfortaa-VariableFont_wght.woff2") format(woff2) tech(variations), url("../font/Comfortaa-VariableFont_wght.woff2") format("woff2-variations");
+    font-weight: 100 900;
+  }
 }
 /*# sourceMappingURL=app.css.map */
