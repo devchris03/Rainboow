@@ -1,0 +1,38 @@
+{
+  "name": "rainboow",
+  "version": "1.0.0",
+  "description": "Tienda de juguetes Online para bebes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/devchris03/Rainboow.git"
+  },
+  "author": "Christina Pascual",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devchris03/Rainboow/issues"
+  },
+  "homepage": "https://github.com/Devchris256/carolina-spa#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "cssnano": "^6.1.2",
+    "gulp": "^4.0.2",
+    "gulp-avif": "^1.1.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^10.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^4.0.1",
+    "gulp-webp": "^4.0.1",
+    "postcss": "^8.4.38",
+    "sass": "^1.74.1"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%"
+  ]
+}
