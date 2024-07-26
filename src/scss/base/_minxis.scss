@@ -23,3 +23,18 @@
         @content;
     }
 }
+
+@mixin bgimg($jpg, $webp, $avif) {
+    @supports(background-image: url('#{$jpg}')) {
+        background-image: url('#{$jpg}');
+    }
+
+    @supports(background-image: url('#{$webp}')) {
+        background-image: url('#{$webp}');
+    }
+
+    @supports(background-image: url('#{$avif}')) {
+        background-image: url('#{$avif}');
+    }
+    @content
+}

@@ -1,12 +1,22 @@
-// fuentes personalizada - estatica 
+// fuentes personalizada - estatica: Confortaa
 
 @font-face {
     font-family: "Comfortaa";
     src:
-    url("../font/Comfortaa-Bold.woff2") format("woff2"),
-    url("../font/Comfortaa-Bold.woff") format("woff"),
-      url('../font/Comfortaa-Bold.ttf') format("truetype");
-    font-weight: 700;
+    url("../font/Comfortaa-Regular.woff2") format("woff2"),
+    url("../font/Comfortaa-Regular.woff") format("woff"),
+      url('../font/Comfortaa-Regular.ttf') format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Comfortaa";
+    src:
+    url("../font/Comfortaa-Medium.woff2") format("woff2"),
+    url("../font/Comfortaa-Medium.woff") format("woff"),
+      url('../font/Comfortaa-Medium.ttf') format("truetype");
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -20,17 +30,7 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: "Comfortaa";
-    src:
-    url("../font/Comfortaa-Bold.woff2") format("woff2"),
-    url("../font/Comfortaa-Bold.woff") format("woff"),
-      url('../font/Comfortaa-Bold.ttf') format("truetype");
-    font-weight: 700;
-    font-style: normal;
-}
-
-// fuentes personalizada - variables 
+// fuentes personalizada - variables: Comfortaa
 @supports (font-variation-settings: normal) {
     @font-face {
       font-family: "Comfortaa";
@@ -40,4 +40,31 @@
       font-weight: 100 900;
       font-stretch: 50% 200%;
     }
+}
+
+
+// fuentes personalizada - estatica: Baloo Bhaina2
+
+@font-face {
+  font-family: "Baloo Bhaina 2";
+  src:
+  url("../font/BalooBhaina2-Bold.woff2") format("woff2"),
+  url("../font/BalooBhaina2-Bold.woff") format("woff"),
+    url('../font/BalooBhaina2-Bold.ttf') format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+// fuentes personalizada - variables: Baloo Bhaina 2
+@supports (font-variation-settings: normal) {
+  @font-face {
+    font-family: "Baloo Bhaina 2";
+    src:
+      url("../font/BalooBhaina2-VariableFont_wght.woff2") format(woff2) tech(variations),  /* Sintaxis moderna */
+      url("../font/BalooBhaina2-VariableFont_wght.woff2") format("woff2-variations");
+    font-weight: 100 900;
+    font-stretch: 50% 200%;
   }
+}
+
+

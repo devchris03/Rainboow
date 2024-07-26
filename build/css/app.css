@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Comfortaa";
-  src: url("../font/Comfortaa-Bold.woff2") format("woff2"), url("../font/Comfortaa-Bold.woff") format("woff"), url("../font/Comfortaa-Bold.ttf") format("truetype");
-  font-weight: 700;
+  src: url("../font/Comfortaa-Regular.woff2") format("woff2"), url("../font/Comfortaa-Regular.woff") format("woff"), url("../font/Comfortaa-Regular.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Comfortaa";
-  src: url("../font/Comfortaa-Bold.woff2") format("woff2"), url("../font/Comfortaa-Bold.woff") format("woff"), url("../font/Comfortaa-Bold.ttf") format("truetype");
-  font-weight: 700;
+  src: url("../font/Comfortaa-Medium.woff2") format("woff2"), url("../font/Comfortaa-Medium.woff") format("woff"), url("../font/Comfortaa-Medium.ttf") format("truetype");
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
@@ -24,6 +24,20 @@
     font-stretch: 50% 200%;
   }
 }
+@font-face {
+  font-family: "Baloo Bhaina 2";
+  src: url("../font/BalooBhaina2-Bold.woff2") format("woff2"), url("../font/BalooBhaina2-Bold.woff") format("woff"), url("../font/BalooBhaina2-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@supports (font-variation-settings: normal) {
+  @font-face {
+    font-family: "Baloo Bhaina 2";
+    src: url("../font/BalooBhaina2-VariableFont_wght.woff2") format(woff2) tech(variations), url("../font/BalooBhaina2-VariableFont_wght.woff2") format("woff2-variations");
+    font-weight: 100 900;
+    font-stretch: 50% 200%;
+  }
+}
 html {
   font-size: 16px;
   -webkit-user-select: none;
@@ -35,7 +49,6 @@ body {
   margin: 0;
   font-size: 1rem;
   font-family: "Comfortaa";
-  background: red;
 }
 
 a {
@@ -76,6 +89,102 @@ a {
 @media (min-width: 1024px) {
   .nav {
     gap: 3rem;
+  }
+}
+
+.hero {
+  background-repeat: no-repeat;
+  background-size: auto 50%;
+  background-position: bottom center;
+  background-color: #C4C8CA;
+}
+@supports (background-image: url("../img/bg-hero.jpg")) {
+  .hero {
+    background-image: url("../img/bg-hero.jpg");
+  }
+}
+@supports (background-image: url("../img/bg-hero.webp")) {
+  .hero {
+    background-image: url("../img/bg-hero.webp");
+  }
+}
+@supports (background-image: url("../img/bg-hero.avif")) {
+  .hero {
+    background-image: url("../img/bg-hero.avif");
+  }
+}
+.hero__content {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+.hero__details {
+  padding-block: 2rem;
+}
+.hero__title {
+  font-weight: 900;
+  line-height: 1.2;
+  font-family: "Baloo Bhaina 2";
+  color: #0F83B2;
+  text-shadow: 3px 0px 0 #fafafa;
+  font-size: 2.25rem;
+}
+.hero__text {
+  color: #375259;
+  -webkit-margin-after: 2rem;
+          margin-block-end: 2rem;
+}
+.hero__button {
+  padding: 1rem 1.5rem;
+  color: #191919;
+  background: #FFE926;
+  border: none;
+  border-radius: 5rem;
+  font-family: "Comfortaa";
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+@media (min-width: 420px) {
+  .hero {
+    background-position: top 50px left;
+    background-size: cover;
+  }
+  .hero__details {
+    padding-block: 3rem;
+  }
+}
+@media (min-width: 768px) {
+  .hero {
+    padding-block: 3rem;
+    background-position: top center;
+  }
+  .hero__content {
+    grid-template-rows: unset;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero__details {
+    grid-column: 2;
+  }
+}
+@media (min-width: 1024px) {
+  .hero {
+    padding-block: 5rem;
+  }
+  .hero__title {
+    font-size: 3rem;
+  }
+  .hero__text {
+    font-size: 1.25rem;
+    -webkit-margin-after: 4.25rem;
+            margin-block-end: 4.25rem;
+  }
+}
+@media (min-width: 1366px) {
+  .hero {
+    padding-block: 7rem;
+  }
+  .hero__title {
+    font-size: 4.25rem;
   }
 }
 /*# sourceMappingURL=app.css.map */
