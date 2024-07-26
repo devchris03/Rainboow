@@ -10,7 +10,7 @@
     <header class="header">
         <div class="header__content wrapper">
             <img class="header__logo" src="./build/img/logo.svg" alt="Logo Rainboow rattles" width="100" height="30"/>
-            <nav class="nav">
+            <nav class="nav" aria-label="Principal">
                 <a href="#" class="nav__link">Inicio</a>
                 <a href="#" class="nav__link">Tienda</a>
                 <a href="#" class="nav__link">Página</a>
@@ -31,5 +31,55 @@
             </div>
         </div>
     </div> <!-- hero -->
+    <main>
+        <section class="category" aria-labelledby="category">
+            <div class="category__content wrapper">
+                <h2 class="category__title" id="category">Encuentra tu juguete perfecto</h2>
+                <p class="category__text">Nuestras colecciones</p>
+                <div class="category__list">
+                    <div class="category__type">
+                        <picture>
+                            <source srcset="./build/img/juegos.avif" type="image/avif">
+                            <source srcset="./build/img/juegos.webp" type="image/webp">
+                            <img loading="lazy" src="./build/img/juegos.png" alt="Piezas de juegos de color rojo, verde y amarillo">
+                        </picture>
+                        <p class="category__name">Juegos</p>
+                    </div> <!-- type -->
+                    <div class="category__type">
+                        <picture>
+                            <source srcset="./build/img/control.avif" type="image/avif">
+                            <source srcset="./build/img/control.webp" type="image/webp">
+                            <img loading="lazy" src="./build/img/control.png" alt="Dibujo de carrito rojo">
+                        </picture>
+                        <p class="category__name">Juegos de control</p>
+                    </div> <!-- type -->
+                    <div class="category__type">
+                        <picture>
+                            <source srcset="./build/img/educacion.avif" type="image/avif">
+                            <source srcset="./build/img/educacion.webp" type="image/webp">
+                            <img loading="lazy" src="./build/img/educacion.png" alt="Juegue ruby con letras en uno de sus lados">
+                        </picture>
+                        <p class="category__name">Juegos Educacional</p>
+                    </div> <!-- type -->
+                    <div class="category__type">
+                        <picture>
+                            <source srcset="./build/img/ecologico.avif" type="image/avif">
+                            <source srcset="./build/img/ecologico.webp" type="image/webp">
+                            <img loading="lazy" src="./build/img/ecologico.png" alt="Dibujo de caballo juguete con tono mostaza">
+                        </picture>
+                        <p class="category__name">Juegos Amigables</p>
+                    </div> <!-- type -->
+                    <div class="category__type">
+                        <picture>
+                            <source srcset="./build/img/peluche.avif" type="image/avif">
+                            <source srcset="./build/img/peluche.webp" type="image/webp">
+                            <img loading="lazy" src="./build/img/peluche.png" alt="Peluche en tono grid y blanco">
+                        </picture>
+                        <p class="category__name">Juegos suaves</p>
+                    </div> <!-- type -->
+                </div>
+            </div> 
+        </section> <!-- categories -->
+    </main>
 </body>
 </html>
