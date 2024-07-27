@@ -187,4 +187,23 @@ a {
     font-size: 4.25rem;
   }
 }
+
+.category {
+  padding-block: 2rem;
+}
+.category__content {
+  text-align: center;
+}
+.category__list {
+  margin-block: 3rem;
+}
+@media (min-width: 768px) {
+  .category__list {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: end;
+  }
+}
 /*# sourceMappingURL=app.css.map */

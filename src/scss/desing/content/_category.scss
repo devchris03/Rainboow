@@ -1,0 +1,24 @@
+@use '../../base/variables' as v;
+@use '../../base/minxis' as m;
+
+.category {
+    padding-block: 2rem;
+
+    &__content {
+        text-align: center;
+    }
+
+    &__list {
+        margin-block: 3rem;
+    }
+
+    @include m.tablet {
+        &__list {
+            display: flex;
+            gap: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: end;
+        }
+    }
+}
