@@ -1,0 +1,30 @@
+@use '../../base/variables' as v;
+@use '../../base/minxis' as m;
+
+.products {
+    padding-block: 2rem;
+
+    &__content {
+        text-align: center;
+    }
+
+    @include m.phone {
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+            gap: 1rem;
+        }
+    }
+
+    @include m.tablet {
+        &__list {
+            gap: 2rem;
+        }
+    }
+
+    @include m.desk {
+        &__list {
+            gap: 3rem;
+        }
+    }
+}
