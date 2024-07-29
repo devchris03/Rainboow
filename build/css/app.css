@@ -334,4 +334,28 @@ img {
     max-inline-size: none;
   }
 }
+
+.photos {
+  padding-block: 2rem;
+}
+.photos__title {
+  text-align: center;
+}
+.photos__img {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+}
+.photos__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 768px) {
+  .photos {
+    padding-block: 4rem;
+  }
+  .photos__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 /*# sourceMappingURL=app.css.map */
