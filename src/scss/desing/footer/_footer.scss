@@ -1,0 +1,22 @@
+@use '../../base/variables' as v;
+@use '../../base/minxis' as m;
+
+.footer {
+    block-size: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right bottom;
+    @include m.bgimg('../img/bg-footer.jpg', '../img/bg-footer.webp', '../img/bg-footer.avif');
+
+    @include m.tablet {
+        block-size: 250px;
+    }
+
+    @include m.desk {
+        block-size: 350px;
+    }
+
+    @include m.deskXL {
+        block-size: 550px;
+    }
+}

@@ -402,4 +402,41 @@ img {
   background: rgba(6, 200, 37, 0.1);
   color: #06C825;
 }
+
+.footer {
+  block-size: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+}
+@supports (background-image: url("../img/bg-footer.jpg")) {
+  .footer {
+    background-image: url("../img/bg-footer.jpg");
+  }
+}
+@supports (background-image: url("../img/bg-footer.webp")) {
+  .footer {
+    background-image: url("../img/bg-footer.webp");
+  }
+}
+@supports (background-image: url("../img/bg-footer.avif")) {
+  .footer {
+    background-image: url("../img/bg-footer.avif");
+  }
+}
+@media (min-width: 768px) {
+  .footer {
+    block-size: 250px;
+  }
+}
+@media (min-width: 1024px) {
+  .footer {
+    block-size: 350px;
+  }
+}
+@media (min-width: 1366px) {
+  .footer {
+    block-size: 550px;
+  }
+}
 /*# sourceMappingURL=app.css.map */
