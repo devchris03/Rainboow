@@ -1,0 +1,51 @@
+@use '../../base/variables' as v;
+@use '../../base/minxis' as m;
+
+.benefits {
+    padding-block: 2rem;
+
+    @include m.tablet {
+        &__content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+    }
+
+}
+
+.benefit {
+    text-align: center;
+    padding-block: 1rem;
+    max-inline-size: 80%;
+    margin: 0 auto;
+    margin-block-end: 2rem;
+
+    &__text {
+        color: v.$black;
+    }
+
+    @include m.tablet {
+        max-inline-size: none;
+        margin: 0;
+    }
+}
+
+.benefit--hour {
+    background: rgba(18, 174, 224, .1);
+    color: #12AEE0;
+}
+
+.benefit--free {
+    background: rgba(232, 123, 22, .1);
+    color: #E87B16;
+}
+
+.benefit--return {
+    background: rgba(6, 200, 37, .1);
+    color: #06C825;
+}
+
+
+
+

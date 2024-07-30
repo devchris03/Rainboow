@@ -358,4 +358,48 @@ img {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+.benefits {
+  padding-block: 2rem;
+}
+@media (min-width: 768px) {
+  .benefits__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+
+.benefit {
+  text-align: center;
+  padding-block: 1rem;
+  max-inline-size: 80%;
+  margin: 0 auto;
+  -webkit-margin-after: 2rem;
+          margin-block-end: 2rem;
+}
+.benefit__text {
+  color: #191919;
+}
+@media (min-width: 768px) {
+  .benefit {
+    max-inline-size: none;
+    margin: 0;
+  }
+}
+
+.benefit--hour {
+  background: rgba(18, 174, 224, 0.1);
+  color: #12AEE0;
+}
+
+.benefit--free {
+  background: rgba(232, 123, 22, 0.1);
+  color: #E87B16;
+}
+
+.benefit--return {
+  background: rgba(6, 200, 37, 0.1);
+  color: #06C825;
+}
 /*# sourceMappingURL=app.css.map */
