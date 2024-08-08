@@ -75,6 +75,10 @@ img {
   gap: 1rem;
 }
 
+.car {
+  outline: 1px solid red;
+}
+
 .nav {
   display: none;
   align-items: center;

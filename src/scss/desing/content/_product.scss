@@ -87,23 +87,7 @@
     }
 
     &__button {
-        background: v.$blue20;
-        border: none;
-        color: v.$white;
-        border-radius: 1rem;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: .25rem;
-        padding: .625rem;
-        font-family: v.$fontPrimary;
-        justify-content: center;
-        margin: 0 auto;
-        transition: background .3s;
-
-        &:hover {
-            background: v.$lightBlue;
-        }
+        @include m.button;
     }
 
     @include m.tablet {
