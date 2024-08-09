@@ -49,6 +49,7 @@ body {
   margin: 0;
   font-size: 1rem;
   font-family: "Comfortaa";
+  position: relative;
 }
 
 a {
@@ -316,7 +317,7 @@ img {
 }
 .product__button {
   background: #0F83B2;
-  border: none;
+  border: 1px solid #0F83B2;
   color: #fafafa;
   border-radius: 1rem;
   cursor: pointer;
@@ -328,6 +329,7 @@ img {
   justify-content: center;
   margin: 0 auto;
   transition: background 0.3s;
+  box-sizing: border-box;
 }
 .product__button:hover {
   background: #4CC9FC;
@@ -405,6 +407,91 @@ img {
 .benefit--return {
   background: rgba(6, 200, 37, 0.1);
   color: #06C825;
+}
+
+.modal {
+  background: #fafafa;
+  inset-inline-end: 0;
+  inset-block-start: 0;
+  z-index: 1;
+  block-size: 100vh;
+  border-radius: 0.5rem 0 0 0.5rem;
+  padding: 1rem 0.5rem;
+  inline-size: 75vw;
+  box-sizing: border-box;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+  display: grid;
+  position: fixed;
+  grid-template-rows: auto 1fr auto;
+}
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-padding-after: 0.5rem;
+          padding-block-end: 0.5rem;
+  -webkit-border-after: 1px solid #D4D4D4;
+          border-block-end: 1px solid #D4D4D4;
+}
+.modal__body {
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+.modal__details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal__priceTotal {
+  font-weight: 900;
+  color: #0F83B2;
+}
+.modal__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.modal__buttonPrimary, .modal__buttonSecundary {
+  background: #0F83B2;
+  border: 1px solid #0F83B2;
+  color: #fafafa;
+  border-radius: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.625rem;
+  font-family: "Comfortaa";
+  justify-content: center;
+  margin: 0 auto;
+  transition: background 0.3s;
+  box-sizing: border-box;
+  inline-size: 100%;
+}
+.modal__buttonPrimary:hover, .modal__buttonSecundary:hover {
+  background: #4CC9FC;
+}
+.modal__buttonSecundary {
+  background: transparent;
+  color: #0F83B2;
+}
+.modal__buttonSecundary:hover {
+  background: unset;
+}
+@media (min-width: 768px) {
+  .modal {
+    inline-size: 50vw;
+    padding-inline: 1rem;
+  }
+  .modal__footer {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1024px) {
+  .modal {
+    inline-size: 30vw;
+    padding-inline: 1.25rem;
+  }
 }
 
 .footer {

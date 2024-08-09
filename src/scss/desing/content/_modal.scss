@@ -1,0 +1,78 @@
+@use '../../base/variables' as v;
+@use '../../base/minxis' as m;
+
+.modal {
+    background: v.$white;
+    inset-inline-end: 0;
+    inset-block-start: 0;
+    z-index: 1;
+    block-size: 100vh;
+    border-radius: .5rem 0 0 .5rem;
+    padding: 1rem .5rem;
+    inline-size: 75vw;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 100vmax rgba(000, 000, 000, .5);
+    display: grid;
+    position: fixed;
+    grid-template-rows: auto 1fr auto;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-block-end: .5rem;
+        border-block-end: 1px solid v.$gray20;
+    }
+    &__body {
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+
+    &__details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__priceTotal {
+        font-weight: 900;
+        color: v.$blue20;
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;   
+    }
+
+    &__buttonPrimary {
+        @include m.button {
+            inline-size: 100%;
+        }
+    }
+
+    &__buttonSecundary {
+        @extend .modal__buttonPrimary;
+        background: transparent;
+        color: v.$blue20;
+
+        &:hover {
+            background: unset;
+        }
+    }
+
+    @include m.tablet {
+        inline-size: 50vw;
+        padding-inline: 1rem;
+
+        &__footer {
+            flex-direction: row;
+        }
+    }
+
+    @include m.desk {
+        inline-size: 30vw;
+        padding-inline: 1.25rem;
+    }
+
+}

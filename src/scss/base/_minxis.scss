@@ -42,7 +42,7 @@
 
 @mixin button {
     background: v.$blue20;
-    border: none;
+    border: 1px solid v.$blue20;
     color: v.$white;
     border-radius: 1rem;
     cursor: pointer;
@@ -54,8 +54,11 @@
     justify-content: center;
     margin: 0 auto;
     transition: background .3s;
+    box-sizing: border-box;
+    @content;
 
     &:hover {
         background: v.$lightBlue;
+        
     }
 }
