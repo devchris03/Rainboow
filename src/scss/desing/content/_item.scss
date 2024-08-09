@@ -1,0 +1,84 @@
+@use '../../base/variables' as v;
+@use '../../base/minxis' as m;
+
+.item {
+
+    font-size: .875rem;
+    display: flex;
+    flex-direction: column;
+    gap: .875rem;
+
+    padding: .5rem;
+    background: rgba(v.$lightBlue, $alpha: .1);
+    border-radius: .25rem;
+    overflow: hidden;
+
+    &__detailProduct,
+    &__detailPrice,
+    &__detailQuantity {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: .625rem;
+    }
+
+    &__name,
+    &__price,
+    &__subtotal,
+    &__deleted {
+        margin: 0;
+    }
+
+    &__img {
+        inline-size: 20%;
+    }
+
+    &__detailPrice {
+        color: v.$gray10;
+    }
+
+    &__quantity {
+        border: 2px solid v.$blue20;
+        display: flex;
+        align-items: center;
+        border-radius: 1rem;
+        overflow: hidden;
+        inline-size: 6.25rem;
+
+        & > * {
+            flex: 1;
+        }
+    }
+
+    &__button {
+        font-size: 1.25rem;
+        color: v.$blue20;
+        background: transparent;
+        border: none;
+    }
+
+    .resta {
+        border-inline-end: 2px solid v.$blue20;
+    }
+
+    .suma {
+        border-inline-start: 2px solid v.$blue20;
+    }
+
+    &__number {
+        text-align: center;
+        color: v.$blue10;
+    }
+
+    &__subtotal {
+        color: v.$blue20;
+        font-weight: 900;
+    }
+
+    &__deleted {
+        color: v.$red;
+        text-align: end;
+    }
+
+    
+}
