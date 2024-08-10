@@ -23,15 +23,36 @@
         padding-block-end: .5rem;
         border-block-end: 1px solid v.$gray20;
     }
-    &__body {
-        display: grid;
-        grid-template-rows: 1fr auto;
+
+    &__buttonClose {
+        @include m.button {
+            border-radius: 50%;
+            padding: 0;
+            inline-size: 1.5rem;
+            aspect-ratio: 1/1;
+            margin: 0;
+        }
     }
 
+    &__body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        block-size: 1rem;
+        overflow: auto;
+    }
+    
     &__details {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        border-block-start: 2px solid v.$blue20;
     }
 
     &__priceTotal {
