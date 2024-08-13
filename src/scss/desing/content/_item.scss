@@ -42,6 +42,7 @@
         border-radius: 1rem;
         overflow: hidden;
         inline-size: 6.25rem;
+        margin: 0;
 
         & > * {
             flex: 1;
@@ -53,6 +54,7 @@
         color: v.$blue20;
         background: transparent;
         border: none;
+        cursor: pointer;
     }
 
     .resta {
@@ -76,6 +78,7 @@
     &__deleted {
         color: v.$red;
         text-align: end;
+        cursor: pointer;
     }
 
     @include m.tablet {

@@ -43,6 +43,7 @@ html {
   -webkit-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -75,9 +76,23 @@ img {
   justify-content: space-between;
   gap: 1rem;
 }
-
-.car {
-  outline: 1px solid red;
+.header__carButton {
+  background: rgba(76, 201, 252, 0.3);
+  padding: 0.25rem 0.5rem;
+  inline-size: 3rem;
+  block-size: 3rem;
+  position: relative;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+.header__carIcon {
+  position: absolute;
+  inset-inline-start: 50%;
+  inset-inline-start: 50%;
+  inset-block-start: 50%;
+  -webkit-transform: translateY(-50%) translateX(calc(-50% - 1px));
+          transform: translateY(-50%) translateX(calc(-50% - 1px));
 }
 
 .nav {
@@ -422,6 +437,8 @@ img {
   display: grid;
   position: fixed;
   grid-template-rows: auto 1fr auto;
+  visibility: hidden;
+  opacity: 0;
 }
 .modal__header {
   display: flex;
@@ -463,6 +480,7 @@ img {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.5rem;
   block-size: 1rem;
   overflow: auto;
@@ -520,9 +538,14 @@ img {
 }
 @media (min-width: 1024px) {
   .modal {
-    inline-size: 30vw;
+    inline-size: 35vw;
     padding-inline: 1.25rem;
   }
+}
+
+.modal.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .item {
@@ -557,6 +580,7 @@ img {
   border-radius: 1rem;
   overflow: hidden;
   inline-size: 6.25rem;
+  margin: 0;
 }
 .item__quantity > * {
   flex: 1;
@@ -566,6 +590,7 @@ img {
   color: #0F83B2;
   background: transparent;
   border: none;
+  cursor: pointer;
 }
 .item .resta {
   -webkit-border-end: 2px solid #0F83B2;
@@ -586,6 +611,7 @@ img {
 .item__deleted {
   color: #F27373;
   text-align: end;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .item {
