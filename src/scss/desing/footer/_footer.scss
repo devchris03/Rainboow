@@ -2,21 +2,21 @@
 @use '../../base/minxis' as m;
 
 .footer {
-    block-size: 200px;
+    block-size: 12.5rem;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right bottom;
     @include m.bgimg('../img/bg-footer.jpg', '../img/bg-footer.webp', '../img/bg-footer.avif');
 
     @include m.tablet {
-        block-size: 250px;
+        block-size: 15.625rem;
     }
 
     @include m.desk {
-        block-size: 350px;
+        block-size: 21.875rem;
     }
 
     @include m.deskXL {
-        block-size: 550px;
+        block-size: 34.375rem;
     }
 }

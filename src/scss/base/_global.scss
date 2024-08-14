@@ -8,10 +8,10 @@ html {
 }
 
 body {
-    margin: 0;
+    position: relative;
     font-size: 1rem;
     font-family: v.$fontPrimary;
-    position: relative;
+    margin: 0;
 }
 
 a {
@@ -19,7 +19,6 @@ a {
 }
 
 img {
-    // inline-size: 100%;
     max-inline-size: 100%;
 }
 

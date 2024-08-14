@@ -11,7 +11,7 @@
         @content;
     }
 }
-  
+
 @mixin desk {
     @media (min-width: v.$desk) {
         @content;
@@ -40,24 +40,29 @@
 }
 
 
-@mixin button {
-    background: v.$blue20;
-    border: 1px solid v.$blue20;
-    color: v.$white;
-    border-radius: 1rem;
-    cursor: pointer;
+@mixin button($background: v.$blue20, $borderColor: v.$blue20, $color: v.$white, $margin: 0 auto,) {
     display: flex;
     align-items: center;
+    justify-content: center;
+
+    background: $background;
+    border: 1px solid $borderColor;
+    color: $color;
+    border-radius: 1rem;
+    cursor: pointer;
     padding: .625rem;
     font-family: v.$fontPrimary;
-    justify-content: center;
-    margin: 0 auto;
-    transition: background .3s;
+    margin: $margin;
     box-sizing: border-box;
+    
+    transition: background .3s;
     @content;
+}
 
+@mixin hover($background){
     &:hover {
-        background: v.$lightBlue;
-        
+        background: $background;
     }
 }
+
+
