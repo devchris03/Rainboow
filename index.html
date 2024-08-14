@@ -10,41 +10,41 @@
     <header class="header">
         <div class="header__content wrapper">
             <img class="header__logo" src="./build/img/logo.svg" alt="Logo Rainboow rattles" width="100" height="30"/>
-            <nav class="nav" aria-label="Principal">
+            <nav class="nav" aria-label="Navegación">
                 <a href="./index.html" class="nav__link">Inicio</a>
                 <a href="#product" class="nav__link">Tienda</a>
                 <a href="#" class="nav__link">Página</a>
                 <a href="#" class="nav__link">Blog</a>
                 <a href="#" class="nav__link">Contacto</a>
             </nav> <!-- nav -->
-            <button class="header__carButton" id="carButton">
+            <button class="header__carButton" aria-label="Click para ver carrito">
                 <img src="./build/img/icon-car.svg" width="28" height="28" alt="carrito de compra en tono gris" class="header__carIcon">
             </button>
         </div> <!-- content -->
     </header>
-    <div class="modal" id="carModal">
-        <header class="modal__header">
-            <span class="modal__name">Mi carrito</span>
-            <button class="modal__buttonClose" id="closeButton">X</button>
-        </header> <!-- modal header -->
-        <div class="modal__body">
-            <div class="modal__content" id="modalContent">
-                <picture>
+    <section class="shoppingCar">
+        <header class="shoppingCar__header">
+            <p class="shoppingCar__name">Mi carrito</p>
+            <button class="shoppingCar__buttonClose">X</button>
+        </header> <!-- shopping Car header -->
+        <div class="shoppingCar__body">
+            <div class="shoppingCar__content">
+                <picture class="shoppingCar__background">
                     <source srcset="./build/img/empty-cart.avif" type="image/avif">
                     <source srcset="./build/img/empty-cart.webp" type="image/webp">
-                    <img loading="lazy" src="./build/img/empty-cart.png" width="200"height="400" alt="">
+                    <img loading="lazy" src="./build/img/empty-cart.png" width="200"height="400" alt="Imagen de Carrito vacío">
                 </picture>
             </div>
-            <div class="modal__details">
-                <p class="modal__text">Total a pagar</p>
-                <p class="modal__priceTotal">$0.00</p>
+            <div class="shoppingCar__details">
+                <p class="shoppingCar__text">Total a pagar</p>
+                <p class="shoppingCar__priceTotal">$0.00</p>
             </div>
-        </div> <!-- modal body -->
-        <footer class="modal__footer">
-            <a href="#" class="modal__buttonPrimary">Comprar ahora</a>
-            <a href="#" class="modal__buttonSecundary">Vaciar carrito</a>
-        </footer> <!-- modal footer -->
-    </div> <!-- modal -->
+        </div> <!-- shopping Car body -->
+        <footer class="shoppingCar__footer">
+            <a href="#" class="shoppingCar__buttonPrimary">Comprar ahora</a>
+            <a href="#" class="shoppingCar__buttonSecundary">Vaciar carrito</a>
+        </footer> <!-- shopping Car footer -->
+    </section> <!-- shopping Car -->
     <div class="hero">
         <div class="hero__content wrapper">
             <div class="hero__details">
@@ -54,364 +54,362 @@
             </div>
         </div>
     </div> <!-- hero -->
-    <main>
-        <section class="category" aria-labelledby="category">
-            <div class="category__content wrapper">
-                <h2 class="category__title" id="category">Encuentra tu juguete perfecto</h2>
-                <p class="category__text">Nuestras colecciones</p>
-                <div class="category__list">
-                    <div class="category__type">
+    <main class="main">
+        <section class="categoryList" aria-label="Categorias de juquetes">
+            <div class="categoryList__content wrapper">
+                <h2 class="categoryList__title">Encuentra tu juguete perfecto</h2>
+                <p class="categoryList__text">Nuestras colecciones</p>
+                <div class="categoryList__container">
+                    <div class="categoryItem">
                         <picture>
                             <source srcset="./build/img/juegos.avif" type="image/avif">
                             <source srcset="./build/img/juegos.webp" type="image/webp">
-                            <img loading="lazy" src="./build/img/juegos.png" alt="Piezas de juegos de color rojo, verde y amarillo">
+                            <img loading="lazy" class="categoryItem__image" src="./build/img/juegos.png" alt="Piezas de juegos de color rojo, verde y amarillo">
                         </picture>
-                        <p class="category__name">Juegos</p>
-                    </div> <!-- type -->
-                    <div class="category__type">
+                        <p class="categoryItem__name">Juegos</p>
+                    </div> <!-- category -->
+                    <div class="categoryItem">
                         <picture>
                             <source srcset="./build/img/control.avif" type="image/avif">
                             <source srcset="./build/img/control.webp" type="image/webp">
-                            <img loading="lazy" src="./build/img/control.png" alt="Dibujo de carrito rojo">
+                            <img loading="lazy" class="categoryItem__image" src="./build/img/control.png" alt="Dibujo de carrito rojo">
                         </picture>
-                        <p class="category__name">Juegos de control</p>
-                    </div> <!-- type -->
-                    <div class="category__type">
+                        <p class="categoryItem__name">Juegos de control</p>
+                    </div> <!-- category -->
+                    <div class="categoryItem">
                         <picture>
                             <source srcset="./build/img/educacion.avif" type="image/avif">
                             <source srcset="./build/img/educacion.webp" type="image/webp">
-                            <img loading="lazy" src="./build/img/educacion.png" alt="Juegue ruby con letras en uno de sus lados">
+                            <img loading="lazy" class="categoryItem__image" src="./build/img/educacion.png" alt="Juegue ruby con letras en uno de sus lados">
                         </picture>
-                        <p class="category__name">Juegos Educacional</p>
-                    </div> <!-- type -->
-                    <div class="category__type">
+                        <p class="categoryItem__name">Juegos Educacional</p>
+                    </div> <!-- category -->
+                    <div class="categoryItem">
                         <picture>
                             <source srcset="./build/img/ecologico.avif" type="image/avif">
                             <source srcset="./build/img/ecologico.webp" type="image/webp">
-                            <img loading="lazy" src="./build/img/ecologico.png" alt="Dibujo de caballo juguete con tono mostaza">
+                            <img loading="lazy" class="categoryItem__image" src="./build/img/ecologico.png" alt="Dibujo de caballo juguete con tono mostaza">
                         </picture>
-                        <p class="category__name">Juegos Amigables</p>
-                    </div> <!-- type -->
-                    <div class="category__type">
+                        <p class="categoryItem__name">Juegos Amigables</p>
+                    </div> <!-- category -->
+                    <div class="categoryItem">
                         <picture>
                             <source srcset="./build/img/peluche.avif" type="image/avif">
                             <source srcset="./build/img/peluche.webp" type="image/webp">
-                            <img loading="lazy" src="./build/img/peluche.png" alt="Peluche en tono grid y blanco">
+                            <img loading="lazy" class="categoryItem__image" src="./build/img/peluche.png" alt="Peluche en tono grid y blanco">
                         </picture>
-                        <p class="category__name">Juegos suaves</p>
-                    </div> <!-- type -->
+                        <p class="categoryItem__name">Juegos suaves</p>
+                    </div> <!-- category -->
                 </div>
             </div> 
-        </section> <!-- categories -->
-        <section class="products" aria-labelledby="productsTitle" id="product">
-            <div class="products__content wrapper">
-                <h2 class="products__title" id="productsTitle">Nuestros productos</h2>
-                <div class="products__list">
-                    <div class="product">
-                        <div class="product__image product__image--sale">
-                            <picture class="product__picture">
+        </section> <!-- catery List -->
+        <section class="productList" aria-label="Productos">
+            <div class="productList__content wrapper">
+                <h2 class="productList__title">Nuestros productos</h2>
+                <div class="productList__container">
+                    <article class="productItem">
+                        <div class="productItem__image productItem__image--sale">
+                            <picture class="productItem__picture">
                                 <source srcset="./build/img/producto-1.avif" type="image/avif">
                                 <source srcset="./build/img/producto-1.webp" type="image/webp">
-                                <img loading="lazy" class="product__img" src="./build/img/producto-1.png" alt="Jueguete cajon abecedario">
+                                <img loading="lazy" class="productItem__img" src="./build/img/producto-1.png" alt="Jueguete cajon abecedario">
                             </picture>
                         </div>
-                        <div class="product__details">
-                            <h3 class="product__name">Caja abecedario</h3>
-                            <p class="product__price product__price--actualy"><span>$315</span><span>$560</span></p>
-                            <div class="product__value product__value--4"></div>
-                            <button data-id="1" class="product__button"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
+                        <div class="productItem__details">
+                            <h3 class="productItem__name">Caja abecedario</h3>
+                            <p class="productItem__price productItem__price--actualy"><span>$315</span><span>$560</span></p>
+                            <div class="productItem__value productItem__value--4"></div>
+                            <button data-id="1" class="productItem__button" aria-label="Agregar al carrito Caja abecedario"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
-                    </div> <!-- product -->
-                    <div class="product">
-                        <div class="product__image">
-                            <picture class="product__picture">
+                    </article> <!-- product -->
+                    <article class="productItem">
+                        <div class="productItem__image">
+                            <picture class="productItem__picture">
                                 <source srcset="./build/img/producto-2.avif" type="image/avif">
                                 <source srcset="./build/img/producto-2.webp" type="image/webp">
-                                <img loading="lazy" class="product__img" src="./build/img/producto-2.png" alt="Kit Unicornio mágico">
+                                <img loading="lazy" class="productItem__img" src="./build/img/producto-2.png" alt="Kit Unicornio mágico">
                             </picture>
                         </div>
-                        <div class="product__details">
-                            <h3 class="product__name">Kit Unicornio mágico</h3>
-                            <p class="product__price"><span>$475</span></p>
-                            <div class="product__value product__value--5"></div>
-                            <button data-id="2" class="product__button"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
+                        <div class="productItem__details">
+                            <h3 class="productItem__name">Kit Unicornio mágico</h3>
+                            <p class="productItem__price"><span>$475</span></p>
+                            <div class="productItem__value productItem__value--5"></div>
+                            <button data-id="2" class="productItem__button" aria-label="Agregar al carrito Kit Unicornio mágico" ><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
-                    </div> <!-- product -->
-                    <div class="product">
-                        <div class="product__image product__image--sale">
-                            <picture class="product__picture">
+                    </article> <!-- product -->
+                    <article class="productItem">
+                        <div class="productItem__image productItem__image--sale">
+                            <picture class="productItem__picture">
                                 <source srcset="./build/img/producto-3.avif" type="image/avif">
                                 <source srcset="./build/img/producto-3.webp" type="image/webp">
-                                <img loading="lazy" class="product__img" src="./build/img/producto-3.png" alt="Jueguete anillos happy">
+                                <img loading="lazy" class="productItem__img" src="./build/img/producto-3.png" alt="Jueguete anillos happy">
                             </picture>
                         </div>
-                        <div class="product__details">
-                            <h3 class="product__name">Cajita Anillo felíz</h3>
-                            <p class="product__price product__price--actualy"><span>$126</span><span>$197</span></p>
-                            <div class="product__value product__value--3"></div>
-                            <button data-id="3" class="product__button"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
+                        <div class="productItem__details">
+                            <h3 class="productItem__name">Cajita Anillo felíz</h3>
+                            <p class="productItem__price productItem__price--actualy"><span>$126</span><span>$197</span></p>
+                            <div class="productItem__value productItem__value--3"></div>
+                            <button data-id="3" class="productItem__button" aria-label="Agregar al carrito Cajita Anillo feliz"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
-                    </div> <!-- product -->
-                    <div class="product">
-                        <div class="product__image product__image--sale">
-                            <picture class="product__picture">
+                    </article> <!-- product -->
+                    <article class="productItem">
+                        <div class="productItem__image productItem__image--sale">
+                            <picture class="productItem__picture">
                                 <source srcset="./build/img/producto-4.avif" type="image/avif">
                                 <source srcset="./build/img/producto-4.webp" type="image/webp">
-                                <img loading="lazy" class="product__img" src="./build/img/producto-4.png" alt="Jueguete bebe reno">
+                                <img loading="lazy" class="productItem__img" src="./build/img/producto-4.png" alt="Jueguete bebe reno">
                             </picture>
                         </div>
-                        <div class="product__details">
-                            <h3 class="product__name">Bebe reno</h3>
-                            <p class="product__price product__price--actualy"><span>$400</span><span>$450</span></p>
-                            <div class="product__value product__value--5"></div>
-                            <button data-id="4" class="product__button"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
+                        <div class="productItem__details">
+                            <h3 class="productItem__name">Bebe reno</h3>
+                            <p class="productItem__price productItem__price--actualy"><span>$400</span><span>$450</span></p>
+                            <div class="productItem__value productItem__value--5"></div>
+                            <button data-id="4" class="productItem__button" aria-label="Agregar al carrito Bebe reno"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
-                    </div> <!-- product -->
-                    <div class="product">
-                        <div class="product__image">
-                            <picture class="product__picture">
+                    </article> <!-- product -->
+                    <article class="productItem">
+                        <div class="productItem__image">
+                            <picture class="productItem__picture">
                                 <source srcset="./build/img/producto-5.avif" type="image/avif">
                                 <source srcset="./build/img/producto-5.webp" type="image/webp">
-                                <img loading="lazy" class="product__img" src="./build/img/producto-5.png" alt="Mario cars">
+                                <img loading="lazy" class="productItem__img" src="./build/img/producto-5.png" alt="Mario cars">
                             </picture>
                         </div>
-                        <div class="product__details">
-                            <h3 class="product__name">Mario car</h3>
-                            <p class="product__price"><span>$678</span></p>
-                            <div class="product__value product__value--5"></div>
-                            <button data-id="5" class="product__button"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
+                        <div class="productItem__details">
+                            <h3 class="productItem__name">Mario car</h3>
+                            <p class="productItem__price"><span>$678</span></p>
+                            <div class="productItem__value productItem__value--5"></div>
+                            <button data-id="5" class="productItem__button" aria-label="Agregar al carrito Mario car" ><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
-                    </div> <!-- product -->
-                    <div class="product">
-                        <div class="product__image product__image--sale">
+                    </article> <!-- product -->
+                    <article class="productItem">
+                        <div class="productItem__image productItem__image--sale">
                             <picture class="product__picture">
                                 <source srcset="./build/img/producto-6.avif" type="image/avif">
                                 <source srcset="./build/img/producto-6.webp" type="image/webp">
-                                <img loading="lazy" class="product__img" src="./build/img/producto-6.png" alt="Jueguete perro de madera">
+                                <img loading="lazy" class="productItem__img" src="./build/img/producto-6.png" alt="Jueguete perro de madera">
                             </picture>
                         </div>
-                        <div class="product__details">
-                            <h3 class="product__name">Perro amigo</h3>
-                            <p class="product__price product__price--actualy"><span>$95</span><span>$126</span></p>
-                            <div class="product__value product__value--3"></div>
-                            <button data-id="6" class="product__button"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
+                        <div class="productItem__details">
+                            <h3 class="productItem__name">Perro amigo</h3>
+                            <p class="productItem__price productItem__price--actualy"><span>$95</span><span>$126</span></p>
+                            <div class="productItem__value productItem__value--3"></div>
+                            <button data-id="6" class="productItem__button" aria-label="Agregar al carrito Perro amigo"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
-                    </div> <!-- product -->
-                    <div class="product">
-                        <div class="product__image">
-                            <picture class="product__picture">
+                    </article> <!-- product -->
+                    <article class="productItem">
+                        <div class="productItem__image">
+                            <picture class="productItem__picture">
                                 <source srcset="./build/img/producto-7.avif" type="image/avif">
                                 <source srcset="./build/img/producto-7.webp" type="image/webp">
-                                <img loading="lazy" class="product__img" src="./build/img/producto-7.png" alt="Triciclo de madera en tonos verdes">
+                                <img loading="lazy" class="productItem__img" src="./build/img/producto-7.png" alt="Triciclo de madera en tonos verdes">
                             </picture>
                         </div>
-                        <div class="product__details">
-                            <h3 class="product__name">Caja abecedario</h3>
-                            <p class="product__price"><span>$873</span></p>
-                            <div class="product__value product__value--5"></div>
-                            <button data-id="7" class="product__button"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
+                        <div class="productItem__details">
+                            <h3 class="productItem__name">Caja abecedario</h3>
+                            <p class="productItem__price"><span>$873</span></p>
+                            <div class="productItem__value productItem__value--5"></div>
+                            <button data-id="7" class="productItem__button" aria-label="Agregar al carrito Caja abecedario" ><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
-                    </div> <!-- product -->
-                    <div class="product">
-                        <div class="product__image">
-                            <picture class="product__picture">
+                    </article> <!-- product -->
+                    <article class="productItem">
+                        <div class="productItem__image">
+                            <picture class="productItem__picture">
                                 <source srcset="./build/img/producto-8.avif" type="image/avif">
                                 <source srcset="./build/img/producto-8.webp" type="image/webp">
-                                <img loading="lazy" class="product__img" src="./build/img/producto-8.png" alt="Jueguete andador aprendiz">
+                                <img loading="lazy" class="productItem__img" src="./build/img/producto-8.png" alt="Jueguete andador aprendiz">
                             </picture>
                         </div>
-                        <div class="product__details">
-                            <h3 class="product__name">Andador enseña</h3>
-                            <p class="product__price"><span>$816</span></p>
-                            <div class="product__value product__value--5"></div>
-                            <button data-id="8" class="product__button"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
+                        <div class="productItem__details">
+                            <h3 class="productItem__name">Andador enseña</h3>
+                            <p class="productItem__price"><span>$816</span></p>
+                            <div class="productItem__value productItem__value--5"></div>
+                            <button data-id="8" class="productItem__button" aria-label="Agregar al carrito Andador enseña"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
-                    </div> <!-- product -->
-                    <div class="product">
-                        <div class="product__image product__image--sale">
-                            <picture class="product__picture">
+                    </article> <!-- product -->
+                    <article class="productItem">
+                        <div class="productItem__image productItem__image--sale">
+                            <picture class="productItem__picture">
                                 <source srcset="./build/img/producto-9.avif" type="image/avif">
                                 <source srcset="./build/img/producto-9.webp" type="image/webp">
-                                <img loading="lazy" class="product__img" src="./build/img/producto-9.png" alt="Jueguete peluche unicornio">
+                                <img loading="lazy" class="productItem__img" src="./build/img/producto-9.png" alt="Jueguete peluche unicornio">
                             </picture>
                         </div>
-                        <div class="product__details">
-                            <h3 class="product__name">Unicornio bebé</h3>
-                            <p class="product__price product__price--actualy"><span>$400</span><span>$450</span></p>
-                            <div class="product__value product__value--4"></div>
-                            <button data-id="9" class="product__button"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
+                        <div class="productItem__details">
+                            <h3 class="productItem__name">Unicornio bebé</h3>
+                            <p class="productItem__price productItem__price--actualy"><span>$400</span><span>$450</span></p>
+                            <div class="productItem__value productItem__value--4"></div>
+                            <button data-id="9" class="productItem__button" aria-label="Agregar al carrito Unicornio bebé" ><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
-                    </div> <!-- product -->
-                    <div class="product">
-                        <div class="product__image product__image--sale">
-                            <picture class="product__picture">
+                    </article> <!-- product -->
+                    <article class="productItem">
+                        <div class="productItem__image productItem__image--sale">
+                            <picture class="productItem__picture">
                                 <source srcset="./build/img/producto-10.avif" type="image/avif">
                                 <source srcset="./build/img/producto-10.webp" type="image/webp">
-                                <img loading="lazy" class="product__img" src="./build/img/producto-10.png" alt="Jueguete cajon figuras">
+                                <img loading="lazy" class="productItem__img" src="./build/img/producto-10.png" alt="Jueguete cajon figuras">
                             </picture>
                         </div>
-                        <div class="product__details">
-                            <h3 class="product__name">Cajita figura</h3>
-                            <p class="product__price product__price--actualy"><span>$420</span><span>$378</span></p>
-                            <div class="product__value product__value--4"></div>
-                            <button data-id="10" class="product__button"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
+                        <div class="productItem__details">
+                            <h3 class="productItem__name">Cajita figura</h3>
+                            <p class="productItem__price productItem__price--actualy"><span>$420</span><span>$378</span></p>
+                            <div class="productItem__value productItem__value--4"></div>
+                            <button data-id="10" class="productItem__button" aria-label="Agregar al carrito Cajita figura"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
-                    </div> <!-- product -->
-                    <div class="product">
-                        <div class="product__image product__image--sale">
-                            <picture class="product__picture">
+                    </article> <!-- product -->
+                    <article class="productItem">
+                        <div class="productItem__image productItem__image--sale">
+                            <picture class="productItem__picture">
                                 <source srcset="./build/img/producto-12.avif" type="image/avif">
                                 <source srcset="./build/img/producto-12.webp" type="image/webp">
-                                <img loading="lazy" class="product__img" src="./build/img/producto-12.png" alt="Jueguete Sapito feliz">
+                                <img loading="lazy" class="productItem__img" src="./build/img/producto-12.png" alt="Jueguete Sapito feliz">
                             </picture>
                         </div>
-                        <div class="product__details">
-                            <h3 class="product__name">Sapito anillos</h3>
-                            <p class="product__price product__price--actualy"><span>$225</span><span>$300</span></p>
-                            <div class="product__value product__value--4"></div>
-                            <button data-id="11" class="product__button"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
+                        <div class="productItem__details">
+                            <h3 class="productItem__name">Sapito anillos</h3>
+                            <p class="productItem__price productItem__price--actualy"><span>$225</span><span>$300</span></p>
+                            <div class="productItem__value productItem__value--4"></div>
+                            <button data-id="11" class="productItem__button" aria-label="Agregar al carrito Sapito anillos"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
-                    </div> <!-- product -->
-                    <div class="product">
-                        <div class="product__image product__image--sale">
-                            <picture class="product__picture">
+                    </article> <!-- product -->
+                    <article class="productItem">
+                        <div class="productItem__image productItem__image--sale">
+                            <picture class="productItem__picture">
                                 <source srcset="./build/img/producto-13.avif" type="image/avif">
                                 <source srcset="./build/img/producto-13.webp" type="image/webp">
-                                <img loading="lazy" class="product__img" src="./build/img/producto-13.png" alt="Jueguete tu jardin">
+                                <img loading="lazy" class="productItem__img" src="./build/img/producto-13.png" alt="Jueguete tu jardin">
                             </picture>
                         </div>
-                        <div class="product__details">
-                            <h3 class="product__name">El jardín</h3>
-                            <p class="product__price product__price--actualy"><span>$479</span><span>$536</span></p>
-                            <div class="product__value product__value--5"></div>
-                            <button data-id="12" class="product__button"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
+                        <div class="productItem__details">
+                            <h3 class="productItem__name">El jardín</h3>
+                            <p class="productItem__price productItem__price--actualy"><span>$479</span><span>$536</span></p>
+                            <div class="productItem__value productItem__value--5"></div>
+                            <button data-id="12" class="productItem__button" aria-label="Agregar al carrito el jardín" ><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
-                    </div> <!-- product -->
-                    <div class="product">
-                        <div class="product__image product__image--sale">
-                            <picture class="product__picture">
+                    </article> <!-- product -->
+                    <article class="productItem">
+                        <div class="productItem__image productItem__image--sale">
+                            <picture class="productItem__picture">
                                 <source srcset="./build/img/producto-14.avif" type="image/avif">
                                 <source srcset="./build/img/producto-14.webp" type="image/webp">
-                                <img loading="lazy" class="product__img" src="./build/img/producto-14.png" alt="Jueguete cajon abecedario">
+                                <img loading="lazy" class="productItem__img" src="./build/img/producto-14.png" alt="Jueguete cajon abecedario">
                             </picture>
                         </div>
-                        <div class="product__details">
-                            <h3 class="product__name">DinoPuzzple</h3>
-                            <p class="product__price product__price--actualy"><span>$315</span><span>$420</span></p>
-                            <div class="product__value product__value--4"></div>
-                            <button data-id="13" class="product__button"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
+                        <div class="productItem__details">
+                            <h3 class="productItem__name">DinoPuzzple</h3>
+                            <p class="productItem__price productItem__price--actualy"><span>$315</span><span>$420</span></p>
+                            <div class="productItem__value productItem__value--4"></div>
+                            <button data-id="13" class="productItem__button" aria-label="Agregar al carrito DinoPuzzple" ><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
-                    </div> <!-- product -->
-                    <div class="product">
-                        <div class="product__image">
-                            <picture class="product__picture">
+                    </article> <!-- product -->
+                    <article class="productItem">
+                        <div class="productItem__image">
+                            <picture class="productItem__picture">
                                 <source srcset="./build/img/producto-15.avif" type="image/avif">
                                 <source srcset="./build/img/producto-15.webp" type="image/webp">
-                                <img loading="lazy" class="product__img" src="./build/img/producto-15.png" alt="Jueguete Maletin abecedario">
+                                <img loading="lazy" class="productItem__img" src="./build/img/producto-15.png" alt="Jueguete Maletin abecedario">
                             </picture>
                         </div>
-                        <div class="product__details">
-                            <h3 class="product__name">Maletín abecedario</h3>
-                            <p class="product__price"><span>$743</span></p>
-                            <div class="product__value product__value--5"></div>
-                            <button data-id="14" class="product__button"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
+                        <div class="productItem__details">
+                            <h3 class="productItem__name">Maletín abecedario</h3>
+                            <p class="productItem__price"><span>$743</span></p>
+                            <div class="productItem__value productItem__value--5"></div>
+                            <button data-id="14" class="productItem__button" aria-label="Agregar al carrito Maletin abecedario" ><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
-                    </div> <!-- product -->
-                    <div class="product">
-                        <div class="product__image product__image--sale">
-                            <picture class="product__picture">
+                    </article> <!-- product -->
+                    <article class="productItem">
+                        <div class="productItem__image productItem__image--sale">
+                            <picture class="productItem__picture">
                                 <source srcset="./build/img/producto-16.avif" type="image/avif">
                                 <source srcset="./build/img/producto-16.webp" type="image/webp">
-                                <img loading="lazy" class="product__img" src="./build/img/producto-16.png" alt="Jueguete cajon abecedario">
+                                <img loading="lazy" class="productItem__img" src="./build/img/producto-16.png" alt="Jueguete cajon abecedario">
                             </picture>
                         </div>
-                        <div class="product__details">
-                            <h3 class="product__name">Primeros pasos</h3>
-                            <p class="product__price"><span>$698</span></p>
-                            <div class="product__value product__value--5"></div>
-                            <button data-id="15" class="product__button"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
+                        <div class="productItem__details">
+                            <h3 class="productItem__name">Primeros pasos</h3>
+                            <p class="productItem__price"><span>$698</span></p>
+                            <div class="productItem__value productItem__value--5"></div>
+                            <button data-id="15" class="productItem__button" aria-label="Agregar a caja Primeros pasos"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
-                    </div> <!-- product -->
-                    <div class="product">
-                        <div class="product__image product__image--sale">
-                            <picture class="product__picture">
+                    </article> <!-- product -->
+                    <article class="productItem">
+                        <div class="productItem__image productItem__image--sale">
+                            <picture class="productItem__picture">
                                 <source srcset="./build/img/producto-17.avif" type="image/avif">
                                 <source srcset="./build/img/producto-17.webp" type="image/webp">
-                                <img loading="lazy" class="product__img" src="./build/img/producto-17.png" alt="Jueguete cajon abecedario">
+                                <img loading="lazy" class="productItem__img" src="./build/img/producto-17.png" alt="Jueguete cajon abecedario">
                             </picture>
                         </div>
-                        <div class="product__details">
-                            <h3 class="product__name">Tabla aprendiz</h3>
-                            <p class="product__price product__price--actualy"><span>$1.090</span><span>$1.205</span></p>
-                            <div class="product__value product__value--5"></div>
-                            <button data-id="16" class="product__button"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
+                        <div class="productItem__details">
+                            <h3 class="productItem__name">Tabla aprendiz</h3>
+                            <p class="productItem__price productItem__price--actualy"><span>$1.090</span><span>$1.205</span></p>
+                            <div class="productItem__value productItem__value--5"></div>
+                            <button data-id="16" class="productItem__button" aria-label="Agregar al carrito Tabla aprendiz"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
-                    </div> <!-- product -->
-                    <div class="product">
-                        <div class="product__image product__image--sale">
-                            <picture class="product__picture">
+                    </article> <!-- product -->
+                    <article class="productItem">
+                        <div class="productItem__image productItem__image--sale">
+                            <picture class="productItem__picture">
                                 <source srcset="./build/img/producto-18.avif" type="image/avif">
                                 <source srcset="./build/img/producto-18.webp" type="image/webp">
-                                <img loading="lazy" class="product__img" src="./build/img/producto-18.png" alt="Jueguete cajon abecedario">
+                                <img loading="lazy" class="productItem__img" src="./build/img/producto-18.png" alt="Jueguete cajon abecedario">
                             </picture>
                         </div>
-                        <div class="product__details">
-                            <h3 class="product__name">Adivina adivinador</h3>
-                            <p class="product__price product__price--actualy"><span>$1.045</span><span>$1.196</span></p>
-                            <div class="product__value product__value--4"></div>
-                            <button data-id="17" class="product__button"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
+                        <div class="productItem__details">
+                            <h3 class="productItem__name">Adivina adivinador</h3>
+                            <p class="productItem__price productItem__price--actualy"><span>$1.045</span><span>$1.196</span></p>
+                            <div class="productItem__value productItem__value--4"></div>
+                            <button data-id="17" class="productItem__button" aria-label="Agregar al carrito Adivina adivinador"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
-                    </div> <!-- product -->
+                    </article> <!-- product -->
                 </div> <!-- list -->
             </div>
-        </section> <!-- products -->
+        </section> <!-- product List -->
     </main>
-    <section class="photos">
+    <section class="photos" aria-label="Experiencias reales">
+        <h2 class="photos__title">Fotos recientes</h2>
         <div class="photos__content">
-            <h2 class="photos__title">Fotos recientes</h2>
-            <div class="photos__container">
-                <picture>
-                    <source srcset="./build/img/photo-1.avif" type="image/avif">
-                    <source srcset="./build/img/photo-1.webp" type="image/webp">
-                    <img class="photos__img" loading="lazy" src="./build/img/photo-1.jpg" alt="Bebe asiatico jugando con un carro">
-                </picture class="photos__picture">
-                <picture>
-                    <source srcset="./build/img/photo-2.avif" type="image/avif">
-                    <source srcset="./build/img/photo-2.webp" type="image/webp">
-                    <img class="photos__img" loading="lazy" src="./build/img/photo-2.jpg" alt="Niña jugando puzzle">
-                </picture class="photos__picture">
-                <picture>
-                    <source srcset="./build/img/photo-3.avif" type="image/avif">
-                    <source srcset="./build/img/photo-3.webp" type="image/webp">
-                    <img class="photos__img" loading="lazy" src="./build/img/photo-3.jpg" alt="Bebe felíz jugando con perro amigo">
-                </picture class="photos__picture">
-                <picture>
-                    <source srcset="./build/img/photo-4.avif" type="image/avif">
-                    <source srcset="./build/img/photo-4.webp" type="image/webp">
-                    <img class="photos__img" loading="lazy" src="./build/img/photo-4.jpg" alt="Bebes jugando">
-                </picture class="photos__picture">
-            </div>
+            <picture>
+                <source srcset="./build/img/photo-1.avif" type="image/avif">
+                <source srcset="./build/img/photo-1.webp" type="image/webp">
+                <img class="photos__img" loading="lazy" src="./build/img/photo-1.jpg" alt="Bebe asiatico jugando con un carro">
+            </picture class="photos__picture"> <!-- picture -->
+            <picture>
+                <source srcset="./build/img/photo-2.avif" type="image/avif">
+                <source srcset="./build/img/photo-2.webp" type="image/webp">
+                <img class="photos__img" loading="lazy" src="./build/img/photo-2.jpg" alt="Niña jugando puzzle">
+            </picture class="photos__picture"> <!-- picture -->
+            <picture>
+                <source srcset="./build/img/photo-3.avif" type="image/avif">
+                <source srcset="./build/img/photo-3.webp" type="image/webp">
+                <img class="photos__img" loading="lazy" src="./build/img/photo-3.jpg" alt="Bebe felíz jugando con perro amigo">
+            </picture class="photos__picture"> <!-- picture -->
+            <picture>
+                <source srcset="./build/img/photo-4.avif" type="image/avif">
+                <source srcset="./build/img/photo-4.webp" type="image/webp">
+                <img class="photos__img" loading="lazy" src="./build/img/photo-4.jpg" alt="Bebes jugando">
+            </picture class="photos__picture"> <!-- picture -->
         </div>
     </section> <!-- photos -->
-    <section class="benefits">
-        <div class="benefits__content wrapper">
-            <div class="benefit benefit--hour">
-                <img class="benefit__icon" src="./build/img/icon-hours.svg" alt="Icono 24 horas en tono azul">
-                <h3 class="benefit__title">Atención al cliente</h3>
-                <p class="benefit__text">Seguimiento en 24 horas</p>
+    <section class="benefitList" aria-label="Beneficios">
+        <div class="benefitList__content wrapper">
+            <div class="benefitItem benefitItem--hour">
+                <img class="benefitItem__icon" src="./build/img/icon-hours.svg" alt="Icono 24 horas en tono azul">
+                <h3 class="benefitItem__title">Atención al cliente</h3>
+                <p class="benefitItem__text">Seguimiento en 24 horas</p>
             </div> <!-- benefit -->
-            <div class="benefit benefit--free">
-                <img class="benefit__icon" src="./build/img/icon-free.svg" alt="Icono carro con la palabra free en tono naranja">
-                <h3 class="benefit__title">Envío gratuito</h3>
-                <p class="benefit__text"> Envío gratuito a partir de 150$</p>
+            <div class="benefitItem benefitItem--free">
+                <img class="benefitItem__icon" src="./build/img/icon-free.svg" alt="Icono carro con la palabra free en tono naranja">
+                <h3 class="benefitItem__title">Envío gratuito</h3>
+                <p class="benefitItem__text"> Envío gratuito a partir de 150$</p>
             </div> <!-- benefit -->
-            <div class="benefit benefit--return">
-                <img class="benefit__icon" src="./build/img/icon-cash.svg" alt="Icono moneda en tonos verdes">
-                <h3 class="benefit__title">Devolución</h3>
-                <p class="benefit__text">En 7 días</p>
+            <div class="benefitItem benefitItem--return">
+                <img class="benefitItem__icon" src="./build/img/icon-cash.svg" alt="Icono moneda en tonos verdes">
+                <h3 class="benefitItem__title">Devolución</h3>
+                <p class="benefitItem__text">En 7 días</p>
             </div> <!-- benefit -->
         </div>
-    </section> <!-- benefits -->
+    </section> <!-- benefit List -->
     <footer class="footer">
     </footer>
 </body>
