@@ -32,15 +32,11 @@
     }
 
     &__button {
-        padding: 1rem 1.5rem;
-        color: v.$black;
-        background: v.$yellow;
-        border: none;
-        border-radius: 5rem;
-        font-family: v.$fontPrimary;
-        font-size: 1rem;
-        cursor: pointer;
-        font-weight: bold;
+        @include m.button(v.$yellow, v.$yellow, v.$black){
+            max-inline-size: 21.875rem;
+        }
+        
+        @include m.hover(rgb(221, 221, 7));
     }
 
     @include m.phone {

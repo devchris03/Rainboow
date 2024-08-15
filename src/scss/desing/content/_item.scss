@@ -3,10 +3,11 @@
 
 .item {
     flex-shrink: 1;
-    font-size: .875rem;
     display: flex;
     flex-direction: column;
     gap: .875rem;
+
+    font-size: .875rem;
     padding: .5rem;
     background: rgba(v.$lightBlue, $alpha: .1);
     border-radius: .25rem;
@@ -36,9 +37,9 @@
     }
 
     &__quantity {
-        border: 2px solid v.$blue20;
         display: flex;
         align-items: center;
+        border: 2px solid v.$blue20;
         border-radius: 1rem;
         overflow: hidden;
         inline-size: 6.25rem;
@@ -55,6 +56,7 @@
         background: transparent;
         border: none;
         cursor: pointer;
+        font-weight: 700;
     }
 
     .resta {

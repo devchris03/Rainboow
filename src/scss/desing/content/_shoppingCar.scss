@@ -1,29 +1,36 @@
 @use '../../base/variables' as v;
 @use '../../base/minxis' as m;
 
-.modal {
-    background: v.$white;
+.shoppingCar {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    position: fixed;
     inset-inline-end: 0;
     inset-block-start: 0;
     z-index: 1;
+
     block-size: 100vh;
-    border-radius: .5rem 0 0 .5rem;
-    padding: 1rem .5rem;
     inline-size: 75vw;
     box-sizing: border-box;
+    padding: 1rem .5rem;
+    background: v.$white;
+    border-radius: .5rem 0 0 .5rem;
     box-shadow: 0 0 0 100vmax rgba(000, 000, 000, .5);
-    display: grid;
-    position: fixed;
-    grid-template-rows: auto 1fr auto;
-    visibility: hidden;
-    opacity: 0;
+    // visibility: hidden;
+    // opacity: 0;
 
     &__header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
         padding-block-end: .5rem;
         border-block-end: 1px solid v.$gray20;
+    }
+
+    &__name {
+        margin: 0;
     }
 
     &__buttonClose {
@@ -43,10 +50,12 @@
 
     &__content {
         flex-grow: 1;
+
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: .5rem;
+
         block-size: 1rem;
         overflow: auto;
     }
@@ -55,6 +64,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        
         border-block-start: 2px solid v.$blue20;
     }
 
@@ -69,20 +79,23 @@
         gap: .5rem;   
     }
 
-    &__buttonPrimary {
+    &__buttonPrimary,
+    &__buttonSecundary {
         @include m.button {
-            inline-size: 100%;
+            flex: 1;
+
+            margin: 0;
         }
     }
 
-    &__buttonSecundary {
-        @extend .modal__buttonPrimary;
-        background: transparent;
-        color: v.$blue20;
+    &__buttonPrimary {
 
-        &:hover {
-            background: unset;
-        }
+        @include m.hover(v.$lightBlue)
+    }
+    
+    &__buttonSecundary {
+        @include m.button(transparent, $color: v.$blue20);
+        @include m.hover(v.$gray20);
     }
 
     @include m.tablet {
@@ -101,7 +114,7 @@
 
 }
 
-.modal.active {
+.shoppingCar.active {
     visibility: visible;
     opacity: 1;
 }
