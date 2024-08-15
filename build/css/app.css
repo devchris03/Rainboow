@@ -464,6 +464,8 @@ img {
   background: #fafafa;
   border-radius: 0.5rem 0 0 0.5rem;
   box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
 }
 .shoppingCar__header {
   display: flex;
