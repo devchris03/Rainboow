@@ -7,6 +7,7 @@
     <title>Rainboow</title>
 </head>
 <body>
+
     <header class="header">
         <div class="header__content wrapper">
             <img class="header__logo" src="./build/img/logo.svg" alt="Logo Rainboow rattles" width="100" height="30"/>
@@ -17,18 +18,18 @@
                 <a href="#" class="nav__link">Blog</a>
                 <a href="#" class="nav__link">Contacto</a>
             </nav> <!-- nav -->
-            <button class="header__carButton" aria-label="Click para ver carrito">
+            <button class="header__carButton" aria-label="Click para ver carrito" id="carButton">
                 <img src="./build/img/icon-car.svg" width="28" height="28" alt="carrito de compra en tono gris" class="header__carIcon">
             </button>
         </div> <!-- content -->
     </header>
-    <section class="shoppingCar">
+    <section class="shoppingCar" id="shoppingCar">
         <header class="shoppingCar__header">
             <p class="shoppingCar__name">Mi carrito</p>
-            <button class="shoppingCar__buttonClose">X</button>
+            <button class="shoppingCar__buttonClose" id="shoppingButtonClose">X</button>
         </header> <!-- shopping Car header -->
         <div class="shoppingCar__body">
-            <div class="shoppingCar__content">
+            <div class="shoppingCar__content" id="shoppingContent">
                 <picture class="shoppingCar__background">
                     <source srcset="./build/img/empty-cart.avif" type="image/avif">
                     <source srcset="./build/img/empty-cart.webp" type="image/webp">
@@ -103,7 +104,7 @@
                 </div>
             </div> 
         </section> <!-- catery List -->
-        <section class="productList" aria-label="Productos">
+        <section class="productList" aria-label="Productos" id="productList">
             <div class="productList__content wrapper">
                 <h2 class="productList__title">Nuestros productos</h2>
                 <div class="productList__container">
@@ -117,7 +118,7 @@
                         </div>
                         <div class="productItem__details">
                             <h3 class="productItem__name">Caja abecedario</h3>
-                            <p class="productItem__price productItem__price--actualy"><span>$315</span><span>$560</span></p>
+                            <p class="productItem__price productItem__price--actualy"><span>315</span><span>560</span></p>
                             <div class="productItem__value productItem__value--4"></div>
                             <button data-id="1" class="productItem__button" aria-label="Agregar al carrito Caja abecedario"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
@@ -132,7 +133,7 @@
                         </div>
                         <div class="productItem__details">
                             <h3 class="productItem__name">Kit Unicornio mágico</h3>
-                            <p class="productItem__price"><span>$475</span></p>
+                            <p class="productItem__price"><span>475</span></p>
                             <div class="productItem__value productItem__value--5"></div>
                             <button data-id="2" class="productItem__button" aria-label="Agregar al carrito Kit Unicornio mágico" ><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
@@ -147,7 +148,7 @@
                         </div>
                         <div class="productItem__details">
                             <h3 class="productItem__name">Cajita Anillo felíz</h3>
-                            <p class="productItem__price productItem__price--actualy"><span>$126</span><span>$197</span></p>
+                            <p class="productItem__price productItem__price--actualy"><span>126</span><span>197</span></p>
                             <div class="productItem__value productItem__value--3"></div>
                             <button data-id="3" class="productItem__button" aria-label="Agregar al carrito Cajita Anillo feliz"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
@@ -162,7 +163,7 @@
                         </div>
                         <div class="productItem__details">
                             <h3 class="productItem__name">Bebe reno</h3>
-                            <p class="productItem__price productItem__price--actualy"><span>$400</span><span>$450</span></p>
+                            <p class="productItem__price productItem__price--actualy"><span>400</span><span>450</span></p>
                             <div class="productItem__value productItem__value--5"></div>
                             <button data-id="4" class="productItem__button" aria-label="Agregar al carrito Bebe reno"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
@@ -177,7 +178,7 @@
                         </div>
                         <div class="productItem__details">
                             <h3 class="productItem__name">Mario car</h3>
-                            <p class="productItem__price"><span>$678</span></p>
+                            <p class="productItem__price"><span>678</span></p>
                             <div class="productItem__value productItem__value--5"></div>
                             <button data-id="5" class="productItem__button" aria-label="Agregar al carrito Mario car" ><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
@@ -192,7 +193,7 @@
                         </div>
                         <div class="productItem__details">
                             <h3 class="productItem__name">Perro amigo</h3>
-                            <p class="productItem__price productItem__price--actualy"><span>$95</span><span>$126</span></p>
+                            <p class="productItem__price productItem__price--actualy"><span>95</span><span>126</span></p>
                             <div class="productItem__value productItem__value--3"></div>
                             <button data-id="6" class="productItem__button" aria-label="Agregar al carrito Perro amigo"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
@@ -207,7 +208,7 @@
                         </div>
                         <div class="productItem__details">
                             <h3 class="productItem__name">Caja abecedario</h3>
-                            <p class="productItem__price"><span>$873</span></p>
+                            <p class="productItem__price"><span>873</span></p>
                             <div class="productItem__value productItem__value--5"></div>
                             <button data-id="7" class="productItem__button" aria-label="Agregar al carrito Caja abecedario" ><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
@@ -222,7 +223,7 @@
                         </div>
                         <div class="productItem__details">
                             <h3 class="productItem__name">Andador enseña</h3>
-                            <p class="productItem__price"><span>$816</span></p>
+                            <p class="productItem__price"><span>816</span></p>
                             <div class="productItem__value productItem__value--5"></div>
                             <button data-id="8" class="productItem__button" aria-label="Agregar al carrito Andador enseña"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
@@ -237,7 +238,7 @@
                         </div>
                         <div class="productItem__details">
                             <h3 class="productItem__name">Unicornio bebé</h3>
-                            <p class="productItem__price productItem__price--actualy"><span>$400</span><span>$450</span></p>
+                            <p class="productItem__price productItem__price--actualy"><span>400</span><span>450</span></p>
                             <div class="productItem__value productItem__value--4"></div>
                             <button data-id="9" class="productItem__button" aria-label="Agregar al carrito Unicornio bebé" ><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
@@ -252,7 +253,7 @@
                         </div>
                         <div class="productItem__details">
                             <h3 class="productItem__name">Cajita figura</h3>
-                            <p class="productItem__price productItem__price--actualy"><span>$420</span><span>$378</span></p>
+                            <p class="productItem__price productItem__price--actualy"><span>420</span><span>378</span></p>
                             <div class="productItem__value productItem__value--4"></div>
                             <button data-id="10" class="productItem__button" aria-label="Agregar al carrito Cajita figura"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
@@ -267,7 +268,7 @@
                         </div>
                         <div class="productItem__details">
                             <h3 class="productItem__name">Sapito anillos</h3>
-                            <p class="productItem__price productItem__price--actualy"><span>$225</span><span>$300</span></p>
+                            <p class="productItem__price productItem__price--actualy"><span>225</span><span>300</span></p>
                             <div class="productItem__value productItem__value--4"></div>
                             <button data-id="11" class="productItem__button" aria-label="Agregar al carrito Sapito anillos"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
@@ -282,7 +283,7 @@
                         </div>
                         <div class="productItem__details">
                             <h3 class="productItem__name">El jardín</h3>
-                            <p class="productItem__price productItem__price--actualy"><span>$479</span><span>$536</span></p>
+                            <p class="productItem__price productItem__price--actualy"><span>479</span><span>536</span></p>
                             <div class="productItem__value productItem__value--5"></div>
                             <button data-id="12" class="productItem__button" aria-label="Agregar al carrito el jardín" ><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
@@ -297,7 +298,7 @@
                         </div>
                         <div class="productItem__details">
                             <h3 class="productItem__name">DinoPuzzple</h3>
-                            <p class="productItem__price productItem__price--actualy"><span>$315</span><span>$420</span></p>
+                            <p class="productItem__price productItem__price--actualy"><span>315</span><span>420</span></p>
                             <div class="productItem__value productItem__value--4"></div>
                             <button data-id="13" class="productItem__button" aria-label="Agregar al carrito DinoPuzzple" ><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
@@ -312,7 +313,7 @@
                         </div>
                         <div class="productItem__details">
                             <h3 class="productItem__name">Maletín abecedario</h3>
-                            <p class="productItem__price"><span>$743</span></p>
+                            <p class="productItem__price"><span>743</span></p>
                             <div class="productItem__value productItem__value--5"></div>
                             <button data-id="14" class="productItem__button" aria-label="Agregar al carrito Maletin abecedario" ><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
@@ -327,7 +328,7 @@
                         </div>
                         <div class="productItem__details">
                             <h3 class="productItem__name">Primeros pasos</h3>
-                            <p class="productItem__price"><span>$698</span></p>
+                            <p class="productItem__price"><span>698</span></p>
                             <div class="productItem__value productItem__value--5"></div>
                             <button data-id="15" class="productItem__button" aria-label="Agregar a caja Primeros pasos"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
@@ -342,7 +343,7 @@
                         </div>
                         <div class="productItem__details">
                             <h3 class="productItem__name">Tabla aprendiz</h3>
-                            <p class="productItem__price productItem__price--actualy"><span>$1.090</span><span>$1.205</span></p>
+                            <p class="productItem__price productItem__price--actualy"><span>1.090</span><span>1.205</span></p>
                             <div class="productItem__value productItem__value--5"></div>
                             <button data-id="16" class="productItem__button" aria-label="Agregar al carrito Tabla aprendiz"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
@@ -357,7 +358,7 @@
                         </div>
                         <div class="productItem__details">
                             <h3 class="productItem__name">Adivina adivinador</h3>
-                            <p class="productItem__price productItem__price--actualy"><span>$1.045</span><span>$1.196</span></p>
+                            <p class="productItem__price productItem__price--actualy"><span>1.045</span><span>1.196</span></p>
                             <div class="productItem__value productItem__value--4"></div>
                             <button data-id="17" class="productItem__button" aria-label="Agregar al carrito Adivina adivinador"><img src="./build/img/icon-car-while.svg" alt="Icono de carrito en tono blanco"> <span>Agregar al carrito</span></button>
                         </div>
@@ -412,5 +413,6 @@
     </section> <!-- benefit List -->
     <footer class="footer">
     </footer>
+    <script src="js/app.js" ></script>
 </body>
 </html>

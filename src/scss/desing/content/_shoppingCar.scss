@@ -79,22 +79,21 @@
         gap: .5rem;   
     }
 
-    &__buttonPrimary,
-    &__buttonSecundary {
+    &__buttonPrimary {
         @include m.button {
             flex: 1;
-
             margin: 0;
         }
-    }
-
-    &__buttonPrimary {
 
         @include m.hover(v.$lightBlue)
     }
     
     &__buttonSecundary {
-        @include m.button(transparent, $color: v.$blue20);
+        @include m.button(transparent, $color: v.$blue20) {
+            flex: 1;
+            margin: 0;
+        };
+        
         @include m.hover(v.$gray20);
     }
 

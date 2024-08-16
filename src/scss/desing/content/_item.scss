@@ -2,7 +2,7 @@
 @use '../../base/minxis' as m;
 
 .item {
-    flex-shrink: 1;
+    // flex-shrink: 1;
     display: flex;
     flex-direction: column;
     gap: .875rem;
@@ -11,6 +11,8 @@
     padding: .5rem;
     background: rgba(v.$lightBlue, $alpha: .1);
     border-radius: .25rem;
+    inline-size: 100%;
+    box-sizing: border-box;
 
     &__detailProduct,
     &__detailPrice,

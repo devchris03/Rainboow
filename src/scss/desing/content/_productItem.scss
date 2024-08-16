@@ -59,6 +59,10 @@
         margin: 0;
         font-weight: 900;
     }
+
+    &__price span::before {
+        content: '$';
+    }
     
     &__price--actualy span:first-of-type {
         color: v.$green;
