@@ -2,6 +2,7 @@
 @use '../../base/minxis' as m;
 
 .hero {
+    padding-block-start: 6rem;
     background-repeat: no-repeat;
     background-size: auto 50%;
     background-position: bottom center;
@@ -49,7 +50,7 @@
     }
 
     @include m.tablet {
-        padding-block: 3rem;
+        padding-block: 9rem;
         background-position: top center;
 
         &__content {
@@ -63,7 +64,7 @@
     }
 
     @include m.desk {
-        padding-block: 5rem;
+        padding-block: 11rem;
 
         &__title {
             font-size: 3rem;
@@ -76,7 +77,7 @@
     }
 
     @include m.deskXL {
-        padding-block: 7rem;
+        padding-block: 13rem;
 
         &__title {
             font-size: 4.25rem;

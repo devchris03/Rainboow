@@ -12,6 +12,7 @@
 
     block-size: 100vh;
     inline-size: 75vw;
+    inline-size: 100vw;
     box-sizing: border-box;
     padding: 1rem .5rem;
     background: v.$white;
@@ -71,6 +72,10 @@
     &__priceTotal {
         font-weight: 900;
         color: v.$blue20;
+
+        &::before {
+            content: '$';
+        }
     }
 
     &__footer {

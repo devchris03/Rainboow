@@ -1,150 +1,124 @@
 const carButton = document.querySelector('#carButton');
 const shoppingCar = document.querySelector('#shoppingCar');
-const carClose = document.querySelector('#shoppingButtonClose');
+const closeButton = document.querySelector('#shoppingButtonClose');
 const productList = document.querySelector('#productList');
 const carContent = document.querySelector('#shoppingContent');
+const emptyCar = document.querySelector('#emptyCar');
+const priceCarTotal = document.querySelector('#priceTotal');
 
 let articleList = [];
 
-
-//carga los eventos del proyecto
-loadEvent()
+// carga los eventos del proyecto
+loadEvent();
 function loadEvent() {
-    carButton.addEventListener('click', openCar);
-    carClose.addEventListener('click', closeCar);
+    carButton.addEventListener('click', toogle);
+    closeButton.addEventListener('click', toogle);
     productList.addEventListener('click', selectProduct);
-    shoppingCar.addEventListener('click', deleteProduct);
-    shoppingCar.addEventListener('click', addQty);
+    shoppingCar.addEventListener('click', handleProduct)
+    emptyCar.addEventListener('click', cleanCar)
 }
 
-// funciones
 
-// muestra el carrito
-function openCar(event) {
-    event.preventDefault();
-    shoppingCar.classList.add('active');
+// muestra y oculta carrito
+function toogle() {
+    shoppingCar.classList.toggle('active');
 }
-
-// oculta el carrito 
-function closeCar() {
-    shoppingCar.classList.remove('active');
-}
-
 
 // selecciona el producto
 function selectProduct(event) {
-    if(event.target.closest('.productItem__button')) {
-        const button = event.target.closest('.productItem__button');
-        const productSelected = button.closest('.productItem');
+    const button = event.target.closest('.productItem__button');
 
-        getData(productSelected)
+    if(button) {
+        const product = button.closest('.productItem');
+
+        getData(product);
     }
 }
 
 // extrae los datos del producto seleccionado
-function getData(productSelected) {
+function getData(product) {
     const productInfo = {
-        img: productSelected.querySelector('.productItem__img').src,
-        imgAlt: productList.querySelector('.productItem__img').alt,
-        title: productSelected.querySelector('.productItem__name').textContent,
-        price: parseFloat(productSelected.querySelector('.productItem__price span:first-child').textContent),
+        img: product.querySelector('.productItem__img').src,
+        imgAlt: product.querySelector('.productItem__img').alt,
+        title: product.querySelector('.productItem__name').textContent,
+        price: parseFloat(product.querySelector('.productItem__price span:first-child').textContent),
+        id: product.querySelector('.productItem__button').getAttribute('data-id'),
         quantity: 1,
-        id: productSelected.querySelector('.productItem__button').getAttribute('data-id'),
     }
-
-    updateProduct(productInfo)
+    update(productInfo)
 }
 
-// actualiza la cantidad 
-function addQty(event) { 
+
+// manipula producto
+function handleProduct(event) {
     event.preventDefault();
-    if(event.target.classList.contains('suma')) {
-        const suma = event.target.closest('.suma');
-        const product = suma.closest('.item');
-        const productInfo = {id: product.querySelector('.item__deleted').getAttribute('id')};
-        updateProduct(productInfo)
-    }
 
     if(event.target.closest('.resta')) {
-        const resta = event.target.closest('.resta');
-        const product = resta.closest('.item');
-        const productInfo = {id: product.querySelector('.item__deleted').getAttribute('id')};
-        const products = articleList.map(product => {
-            if(product.id == productInfo.id) {
-                product.quantity--;
-                return product;
-            } else {
-                return product;
-            }
-        });
+        const item = event.target.closest('.item');
+        const id = item.querySelector('.item__deleted').getAttribute('id');
 
-        articleList = products;
-        
-        cleanCar()
+        update({id: id, quantity: -1});
     }
 
+    if(event.target.closest('.suma')) {
+        const item = event.target.closest('.item');
+        const id = item.querySelector('.item__deleted').getAttribute('id');
+
+        update({id: id, quantity: 1});
+    }
+
+    if(event.target.closest('.item__deleted')) {
+        const id = event.target.closest('.item__deleted').getAttribute('id')
+        deletedProduct(id);
+    }
 }
 
 
-//actualiza el curso si se volvio ha agregar 
-function updateProduct(productInfo) {
-    const exist = articleList.some(product => product.id == productInfo.id);
+// modifica producto: agrega, resta cantidad y elimina producto
+function update(productInfo) {
     
-    if(exist) {
-        
-        const products = articleList.map(product => {
-            if(product.id == productInfo.id) {
-                product.quantity++;
-                return product;
-            } else {
-                return product;
-            }
-        });
+    const productRepeat = articleList.find(product => product.id === productInfo.id);
 
-        articleList = products;
-    
+    if(productRepeat) {
+        productRepeat.quantity += productInfo.quantity;
+        articleList.push[productRepeat];
+
+        if(productRepeat.quantity <= 0) {
+            deletedProduct(productRepeat.id)
+        }
+
     } else {
         articleList = [...articleList, productInfo]
     }
-
-    cleanCar()
-
-}
-
-// elimina un producto 
-function deleteProduct(event) {
-    event.preventDefault();
-    if(event.target.classList.contains('item__deleted')) {
-        const id = event.target.id;
-
-        const products = articleList.filter(product => {
-            if (product.id !== id) {
-                return product;
-            }
-        })
-
-        articleList = products
-        cleanCar()
-    }
+    
+    showCar()
 }
 
 
-// limpia el contenido del carrito
+function deletedProduct(id) {
+    articleList = articleList.filter(product => product.id !== id)
+    showCar()
+}
+
+
+// limpia carrito de compra
 function cleanCar() {
     while(carContent.firstChild) {
         carContent.removeChild(carContent.firstChild);
     }
-
-    showCar()
 }
 
-// muestra los cursos agregados al carrito
+
+// muestra los productos seleccionados en el carrito
 function showCar() {
-    articleList.forEach(product => {
-        const {img, title, price, quantity, id, imgAlt} = product
-        const productItem = document.createElement('div');
-        productItem.classList.add('item');
-        productItem.innerHTML = `
+
+    cleanCar();
+
+    articleList.forEach(producto => {
+        const {img, imgAlt, title, price, id, quantity, subtotal} = producto;
+        const item = document.createElement('div');
+        item.classList.add('item');
+        item.innerHTML = `
             <div class="item__detailProduct">
                 <img src="${img}" alt="${imgAlt}" class="item__img">
                 <p class="item__name">${title}</p>
@@ -159,11 +133,35 @@ function showCar() {
                     <span class="item__number">${quantity}</span>
                     <button class="item__button suma" aria-label="sumar cantidad">+</button>
                 </div>
-                <p class="item__subtotal">$${price * quantity}</p>
+                <p class="item__subtotal">$${(price * quantity).toFixed(2)}</p>
             </div>
             <a class="item__deleted" href="#" id="${id}">Eliminar</a>
+
         `;
 
-        carContent.appendChild(productItem);
+        carContent.appendChild(item)
     })
+
+    sumar()
 }
+
+function sumar() {
+    let price = 0;
+
+    if (articleList.length === 0) {
+        priceCarTotal.textContent = '0.00';
+    } else {
+        articleList.forEach(product => {
+            price += parseFloat(product.price * product.quantity);
+        });
+
+        priceCarTotal.textContent = price.toFixed(2);
+    }
+    
+}
+
+
+
+
+
+

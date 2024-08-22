@@ -70,6 +70,16 @@ img {
 .header {
   background: #fafafa;
   padding-block: 1.5rem;
+  position: fixed;
+  inset-block-start: 0;
+  inline-size: 100%;
+  z-index: 1;
+  -webkit-border-after: 1px solid #D4D4D4;
+          border-block-end: 1px solid #D4D4D4;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  block-size: 6rem;
+  box-sizing: border-box;
 }
 .header__content {
   display: flex;
@@ -117,6 +127,8 @@ img {
 }
 
 .hero {
+  -webkit-padding-before: 6rem;
+          padding-block-start: 6rem;
   background-repeat: no-repeat;
   background-size: auto 50%;
   background-position: bottom center;
@@ -188,7 +200,7 @@ img {
 }
 @media (min-width: 768px) {
   .hero {
-    padding-block: 3rem;
+    padding-block: 9rem;
     background-position: top center;
   }
   .hero__content {
@@ -201,7 +213,7 @@ img {
 }
 @media (min-width: 1024px) {
   .hero {
-    padding-block: 5rem;
+    padding-block: 11rem;
   }
   .hero__title {
     font-size: 3rem;
@@ -214,7 +226,7 @@ img {
 }
 @media (min-width: 1366px) {
   .hero {
-    padding-block: 7rem;
+    padding-block: 13rem;
   }
   .hero__title {
     font-size: 4.25rem;
@@ -462,6 +474,7 @@ img {
   z-index: 1;
   block-size: 100vh;
   inline-size: 75vw;
+  inline-size: 100vw;
   box-sizing: border-box;
   padding: 1rem 0.5rem;
   background: #fafafa;
@@ -526,6 +539,9 @@ img {
 .shoppingCar__priceTotal {
   font-weight: 900;
   color: #0F83B2;
+}
+.shoppingCar__priceTotal::before {
+  content: "$";
 }
 .shoppingCar__footer {
   display: flex;

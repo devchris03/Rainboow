@@ -4,6 +4,14 @@
 .header {
     background: v.$white;
     padding-block: 1.5rem;
+    position: fixed;
+    inset-block-start: 0;
+    inline-size: 100%;
+    z-index: 1;
+    border-block-end: 1px solid v.$gray20;
+    backdrop-filter: blur(10px);
+    block-size: 6rem;
+    box-sizing: border-box;
 
     &__content {
         display: flex;
