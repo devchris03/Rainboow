@@ -23,6 +23,8 @@ Este proyecto es una tienda en línea que permite a los usuarios navegar por una
 
 ✔️ **Vaciar carrito de compras:** Hay una opción para vaciar todo el carrito de compras.
 
+✔️ **Mantiene productos seleccionados (localStorage):** No perderás la selección de tus productos si en dado caso cierras la página por equivocación o se fue el intenet
+
 ## ⚒️ Tecnologias usadas:
 <img src="https://github.com/user-attachments/assets/dce5e265-237c-4af9-be25-12040c2903f7" width="100" height="100" alt="Logo de HTML">
 <img src="https://github.com/user-attachments/assets/f7fb07f6-6bc0-4602-a26b-7b49a8267d24" width="100" height="100" alt="Logo de CSS">
