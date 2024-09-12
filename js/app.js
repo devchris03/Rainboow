@@ -16,6 +16,11 @@ function loadEvent() {
     productList.addEventListener('click', selectProduct);
     shoppingCar.addEventListener('click', handleProduct)
     emptyCar.addEventListener('click', cleanCar)
+
+    document.addEventListener('DOMContentLoaded', () => {
+        articleList = JSON.parse(localStorage.getItem('products')) || [];
+        showCar()
+    })
 }
 
 
@@ -143,6 +148,12 @@ function showCar() {
     })
 
     sumar()
+    syncStorage();
+}
+
+// accede a los datos almacenados del documento
+function syncStorage() {
+    localStorage.setItem('products', JSON.stringify(articleList));
 }
 
 function sumar() {
